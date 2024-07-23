@@ -21,9 +21,11 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: debug
-      run: ls
+      run: ls 
+    - name: debug 2
+      run:  ls ./MMApp.Api
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./MMApp.Api/MMApp.Api.csproj
     - name: Build
       run: dotnet build ./MMApp.Api/MMApp.Api.csproj --no-restore
 #    - name: Test
