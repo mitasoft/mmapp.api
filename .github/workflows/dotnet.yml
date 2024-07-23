@@ -20,10 +20,10 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
     - name: debug
       run: ls
+    - name: Restore dependencies
+      run: dotnet restore
     - name: Build
       run: dotnet build ./MMApp.Api/MMApp.Api.csproj --no-restore
 #    - name: Test
